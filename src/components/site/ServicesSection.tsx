@@ -37,7 +37,7 @@ export function ServicesSection() {
           <ul className="lg:col-span-8 divide-y divide-white/10 border-y border-white/10">
             {services.map((s, i) => (
               <li
-                key={s.number}
+                key={s.title}
                 data-row
                 onMouseEnter={() => setActive(i)}
                 className="group relative"
@@ -67,7 +67,7 @@ export function ServicesSection() {
             <div className="relative h-full w-full overflow-hidden bg-[color:var(--ink-soft)]">
               {services.map((s, i) => (
                 <img
-                  key={s.number}
+                  key={s.title}
                   src={s.image}
                   alt={s.title}
                   width={1200}

@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { LayoutGrid } from "lucide-react";
 import { solutions } from "@/data/solutions";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsapConfig";
 import { SectionHeader } from "./SectionHeader";
@@ -39,7 +40,7 @@ export function SolutionsSection() {
     <section id="solusi" ref={root} className="bg-[color:var(--warm)] py-24 md:py-36">
       <div className="container-x mb-12 md:mb-20">
         <SectionHeader
-          number="03"
+          icon={<LayoutGrid className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />}
           eyebrow="Solusi untuk Kebutuhan"
           title={<>Solusi untuk berbagai <br className="hidden md:inline" />konteks penggunaan.</>}
           subtitle="Setiap kebutuhan memiliki karakter yang berbeda. Pendekatan kami menyesuaikan spesifikasi produk dengan ruang, fungsi, dan tujuan penggunaannya."
@@ -54,7 +55,7 @@ export function SolutionsSection() {
             <ul className="space-y-4">
               {solutions.map((s, i) => (
                 <li key={s.key} className="flex items-baseline gap-4">
-                  <span className="font-mono text-xs text-[color:var(--muted-grey)]">0{i + 1}</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-md border border-[color:var(--border-grey)] text-[color:var(--amber-lit)]">{s.icon}</span>
                   <span className="font-display text-2xl font-medium text-[color:var(--ink)]/50">{s.title}</span>
                 </li>
               ))}
