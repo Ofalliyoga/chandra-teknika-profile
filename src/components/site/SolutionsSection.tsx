@@ -19,6 +19,8 @@ export function SolutionsSection() {
       const panels = track.querySelectorAll<HTMLElement>("[data-panel]");
       const total = panels.length;
 
+      gsap.set(panels, { yPercent: (i) => i * 100 });
+
       ScrollTrigger.create({
         trigger: pinArea,
         start: "top top",
@@ -28,7 +30,7 @@ export function SolutionsSection() {
         anticipatePin: 1,
         invalidateOnRefresh: true,
         animation: gsap.to(panels, {
-          yPercent: -100 * (total - 1),
+          yPercent: (i) => (i - (total - 1)) * 100,
           ease: "none",
         }),
       });
