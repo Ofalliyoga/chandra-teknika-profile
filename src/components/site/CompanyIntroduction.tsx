@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { Building2 } from "lucide-react";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsapConfig";
 
 export function CompanyIntroduction() {
@@ -52,8 +53,8 @@ export function CompanyIntroduction() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <span data-num className="font-display block text-[5.5rem] md:text-[7rem] leading-none font-bold text-[color:var(--ink)]/10">
-              01
+            <span data-num className="inline-flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-2xl border border-[color:var(--amber-lit)]/30 bg-[color:var(--amber-lit)]/10 text-[color:var(--amber-lit)]">
+              <Building2 className="w-10 h-10 md:w-14 md:h-14" strokeWidth={1.2} />
             </span>
             <p data-fade className="eyebrow mt-4">Tentang Perusahaan</p>
             <h2 data-fade className="mt-6 font-display font-semibold text-3xl md:text-[2.6rem] leading-[1.1] tracking-[-0.02em] text-[color:var(--ink)]">
