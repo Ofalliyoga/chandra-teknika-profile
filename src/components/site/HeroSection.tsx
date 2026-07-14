@@ -15,13 +15,13 @@ export function HeroSection() {
       const overlay = root.current!.querySelector<HTMLElement>("[data-hero-overlay]");
       const eyebrow = root.current!.querySelector<HTMLElement>("[data-hero-eyebrow]");
       const lines = root.current!.querySelectorAll<HTMLElement>("[data-hero-line]");
-      const para = root.current!.querySelector<HTMLElement>("[data-hero-para]");
+      const para = root.current!.querySelectorAll<HTMLElement>("[data-hero-word]");
       const cta = root.current!.querySelectorAll<HTMLElement>("[data-hero-cta]");
       const panel = root.current!.querySelectorAll<HTMLElement>("[data-hero-panel]");
 
       if (reduced) {
-        gsap.set([eyebrow, para, ...Array.from(cta), ...Array.from(panel)], { opacity: 1, y: 0 });
-        gsap.set(lines, { y: 0 });
+        gsap.set([eyebrow, ...Array.from(para), ...Array.from(cta), ...Array.from(panel)], { opacity: 1, y: 0 });
+        gsap.set(lines, { yPercent: 0 });
         return;
       }
 
@@ -30,9 +30,9 @@ export function HeroSection() {
       if (overlay) tl.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 1 }, 0.1);
       if (eyebrow) tl.fromTo(eyebrow, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, 0.35);
       tl.fromTo(lines, { yPercent: 110 }, { yPercent: 0, duration: 1.1, stagger: 0.09 }, 0.45);
-      if (para) tl.fromTo(para, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, 0.95);
-      tl.fromTo(cta, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, 1.05);
-      tl.fromTo(panel, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, stagger: 0.08 }, 1.15);
+      if (para.length) tl.fromTo(para, { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.7, stagger: 0.02 }, 0.95);
+      tl.fromTo(cta, { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.08 }, 1.15);
+      tl.fromTo(panel, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, stagger: 0.08 }, 1.25);
     }, root);
     return () => ctx.revert();
   }, []);
