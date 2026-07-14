@@ -53,7 +53,7 @@ export function Footer() {
         </div>
 
         <p id="privasi" className="mt-6 text-[11px] text-[color:var(--muted-grey)]/70 max-w-3xl leading-relaxed">
-          Website ini tidak menyimpan data pengguna. Pesan yang dikirim melalui formulir kontak akan diteruskan langsung ke aplikasi WhatsApp dan tidak disimpan pada database, penyimpanan lokal browser, maupun server pihak ketiga.
+          {"\n"}
         </p>
       </div>
     </footer>
