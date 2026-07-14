@@ -59,7 +59,8 @@ export function ProjectScopeSection() {
                 alt={p.label}
                 width={1200}
                 height={900}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--ink)]/85 via-[color:var(--ink)]/10 to-transparent" />

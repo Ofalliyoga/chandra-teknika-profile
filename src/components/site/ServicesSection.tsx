@@ -72,9 +72,10 @@ export function ServicesSection() {
                   alt={s.title}
                   width={1200}
                   height={1200}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className={"absolute inset-0 h-full w-full object-cover transition-all duration-700 " +
-                    (i === active ? "opacity-100 scale-100" : "opacity-0 scale-105")}
+                    (i === active ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0")}
                 />
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--ink)]/70 to-transparent" />
