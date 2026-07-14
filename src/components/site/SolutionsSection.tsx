@@ -96,7 +96,7 @@ export function SolutionsSection() {
             <div className="flex items-baseline gap-3 eyebrow">
               <span>0{i + 1}</span><span>{s.title}</span>
             </div>
-            <img src={s.image} alt={s.title} width={1200} height={900} loading="lazy" className="mt-5 w-full aspect-[4/3] object-cover" />
+            <img src={s.image} alt={s.title} width={1200} height={900} loading="lazy" decoding="async" className="mt-5 w-full aspect-[4/3] object-cover" />
             <h3 className="mt-6 font-display text-2xl font-semibold text-[color:var(--ink)]">{s.title}</h3>
             <p className="mt-3 text-[color:var(--muted-foreground)]">{s.description}</p>
           </article>
