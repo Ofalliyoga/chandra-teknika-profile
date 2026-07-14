@@ -80,8 +80,8 @@ export function HeroSection() {
             </h1>
 
             <p className="mt-8 max-w-xl text-base md:text-lg text-[color:var(--paper)]/75 leading-relaxed">
-              {companyData.name.split(" ").concat(["menyediakan","kebutuhan","pencahayaan,","perlengkapan","elektrikal,","pengadaan","barang,","serta","dukungan","teknis","untuk","pelanggan","bisnis","dan","berbagai","kebutuhan","proyek."]).map((w, i) => (
-                <span key={i} className="inline-block overflow-hidden align-top pb-[0.12em] -mb-[0.12em]">
+              {`${companyData.name} menyediakan kebutuhan pencahayaan, perlengkapan elektrikal, pengadaan barang, serta dukungan teknis untuk pelanggan bisnis dan berbagai kebutuhan proyek.`.split(" ").map((w, i) => (
+                <span key={i} className="inline-block overflow-hidden align-bottom">
                   <span data-hero-word className="inline-block">{w}&nbsp;</span>
                 </span>
               ))}
