@@ -1,23 +1,22 @@
+import type { ReactNode } from "react";
+
 interface Props {
-  number: string;
+  icon?: ReactNode;
   eyebrow: string;
   title: React.ReactNode;
   subtitle?: string;
   dark?: boolean;
 }
 
-export function SectionHeader({ number, eyebrow, title, subtitle, dark }: Props) {
+export function SectionHeader({ icon, eyebrow, title, subtitle, dark }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-start">
-      <div className="md:col-span-4 flex items-start gap-6">
-        <span
-          className={
-            "font-display text-4xl md:text-5xl font-bold tracking-tight " +
-            (dark ? "text-[color:var(--amber-lit)]" : "text-[color:var(--amber-lit)]")
-          }
-        >
-          {number}
-        </span>
+      <div className="md:col-span-4 flex items-start gap-4">
+        {icon && (
+          <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-lg border border-[color:var(--amber-lit)]/30 bg-[color:var(--amber-lit)]/10 text-[color:var(--amber-lit)]">
+            {icon}
+          </div>
+        )}
         <span className={"eyebrow mt-3 " + (dark ? "text-[color:var(--muted-grey)]" : "")}>{eyebrow}</span>
       </div>
       <div className="md:col-span-8">
