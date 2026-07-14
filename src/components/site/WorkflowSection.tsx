@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { Route } from "lucide-react";
 import { workflow } from "@/data/workflow";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsapConfig";
 import { SectionHeader } from "./SectionHeader";
@@ -35,7 +36,7 @@ export function WorkflowSection() {
     <section ref={ref} className="bg-[color:var(--warm)] py-24 md:py-36 border-t border-[color:var(--border-grey)]">
       <div className="container-x">
         <SectionHeader
-          number="04"
+          icon={<Route className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />}
           eyebrow="Proses Kerja"
           title="Proses kerja yang terarah."
           subtitle="Lima tahap yang membantu memastikan kebutuhan pelanggan dipahami sejak awal hingga pemenuhan produk."
@@ -47,9 +48,9 @@ export function WorkflowSection() {
 
           <ol className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6">
             {workflow.map((w) => (
-              <li key={w.number} data-step className="relative">
+              <li key={w.title} data-step className="relative">
                 <div className="hidden md:block absolute -top-[3px] left-0 w-2 h-2 rounded-full bg-[color:var(--amber-lit)]" />
-                <p className="font-mono text-xs text-[color:var(--muted-grey)] pt-4 md:pt-8">{w.number}</p>
+                <p className="pt-4 md:pt-8"><span className="inline-flex items-center justify-center w-7 h-7 rounded-md border border-[color:var(--border-grey)] text-[color:var(--amber-lit)]">{w.icon}</span></p>
                 <h3 className="mt-3 font-display text-lg md:text-xl font-semibold text-[color:var(--ink)]">{w.title}</h3>
                 <p className="mt-3 text-sm text-[color:var(--muted-foreground)] leading-relaxed">{w.description}</p>
               </li>

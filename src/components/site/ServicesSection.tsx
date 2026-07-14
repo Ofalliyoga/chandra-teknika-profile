@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Lightbulb } from "lucide-react";
 import { services } from "@/data/services";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsapConfig";
 import { SectionHeader } from "./SectionHeader";
@@ -27,7 +27,7 @@ export function ServicesSection() {
       <div className="container-x">
         <SectionHeader
           dark
-          number="02"
+          icon={<Lightbulb className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />}
           eyebrow="Layanan Utama"
           title={<>Layanan yang mendukung <span className="text-[color:var(--amber-lit)]">kebutuhan proyek.</span></>}
           subtitle="Disusun untuk mendukung kebutuhan produk, pengadaan, dan pelaksanaan proyek secara lebih efektif."
@@ -37,7 +37,7 @@ export function ServicesSection() {
           <ul className="lg:col-span-8 divide-y divide-white/10 border-y border-white/10">
             {services.map((s, i) => (
               <li
-                key={s.number}
+                key={s.title}
                 data-row
                 onMouseEnter={() => setActive(i)}
                 className="group relative"
@@ -46,8 +46,8 @@ export function ServicesSection() {
                   href="#kontak"
                   className="grid grid-cols-[auto_1fr_auto] items-baseline gap-6 md:gap-10 py-7 md:py-9 transition-colors"
                 >
-                  <span className="font-mono text-xs md:text-sm tracking-widest text-[color:var(--muted-grey)]">
-                    {s.number}
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-md border border-white/10 text-[color:var(--amber-lit)]">
+                    {s.icon}
                   </span>
                   <div className="min-w-0">
                     <h3 className="font-display text-2xl md:text-4xl font-semibold tracking-tight text-[color:var(--paper)] group-hover:text-[color:var(--amber-lit)] transition-colors">
@@ -67,7 +67,7 @@ export function ServicesSection() {
             <div className="relative h-full w-full overflow-hidden bg-[color:var(--ink-soft)]">
               {services.map((s, i) => (
                 <img
-                  key={s.number}
+                  key={s.title}
                   src={s.image}
                   alt={s.title}
                   width={1200}
@@ -79,7 +79,10 @@ export function ServicesSection() {
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--ink)]/70 to-transparent" />
               <div className="absolute left-6 bottom-6 right-6">
-                <span className="eyebrow text-[color:var(--amber-lit)]">{services[active].number}</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-[color:var(--amber-lit)]">{services[active].icon}</span>
+                  <span className="eyebrow text-[color:var(--amber-lit)]">Layanan</span>
+                </div>
                 <p className="mt-2 font-display text-2xl font-semibold">{services[active].title}</p>
               </div>
             </div>

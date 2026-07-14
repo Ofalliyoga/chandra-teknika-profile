@@ -1,4 +1,5 @@
 import { companyData } from "@/data/company";
+import { MessageSquareText } from "lucide-react";
 import { WhatsAppContactForm } from "./WhatsAppContactForm";
 import { useReveal } from "@/animations/useReveal";
 
@@ -8,7 +9,7 @@ export function ContactSection() {
     <section id="kontak" ref={ref} className="bg-[color:var(--paper)] py-24 md:py-36 border-t border-[color:var(--border-grey)]">
       <div className="container-x grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-5" data-reveal>
-          <p className="eyebrow">08 · Kontak</p>
+          <p className="eyebrow inline-flex items-center gap-3"><span className="inline-flex items-center justify-center w-8 h-8 rounded-md border border-[color:var(--amber-lit)]/30 bg-[color:var(--amber-lit)]/10 text-[color:var(--amber-lit)]"><MessageSquareText className="w-4 h-4" strokeWidth={1.5} /></span> Kontak</p>
           <h2 className="mt-6 font-display font-semibold text-3xl md:text-5xl leading-[1.05] tracking-[-0.02em] text-[color:var(--ink)]">
             Hubungi Kami.
           </h2>
