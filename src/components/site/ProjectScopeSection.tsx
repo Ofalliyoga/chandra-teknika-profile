@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { HardHat } from "lucide-react";
 import { projectScopes } from "@/data/projectScopes";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsapConfig";
 import { SectionHeader } from "./SectionHeader";
@@ -35,7 +36,7 @@ export function ProjectScopeSection() {
       <div className="container-x">
         <SectionHeader
           dark
-          number="06"
+          icon={<HardHat className="w-6 h-6 md:w-7 md:h-7" strokeWidth={1.5} />}
           eyebrow="Ruang Lingkup"
           title="Ruang lingkup kebutuhan yang kami layani."
           subtitle="Kategori ruang dan pekerjaan yang dapat kami dukung dari sisi pengadaan produk lighting dan elektrikal."
