@@ -72,15 +72,19 @@ export function HeroSection() {
               </p>
             </div>
 
-            <h1 className="font-display font-bold text-[2.6rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[5rem] tracking-[-0.03em]">
-              <span className="block overflow-hidden"><span data-hero-line className="inline-block">Solusi <span className="text-[color:var(--amber-lit)]">Lighting</span></span></span>
-              <span className="block overflow-hidden"><span data-hero-line className="inline-block">dan Elektrikal untuk</span></span>
-              <span className="block overflow-hidden"><span data-hero-line className="inline-block">Kebutuhan Bisnis</span></span>
-              <span className="block overflow-hidden"><span data-hero-line className="inline-block">dan Proyek.</span></span>
+            <h1 className="font-display font-bold text-[2.6rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[1.08] tracking-[-0.03em]">
+              <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]"><span data-hero-line className="inline-block">Solusi <span className="text-[color:var(--amber-lit)]">Lighting</span></span></span>
+              <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]"><span data-hero-line className="inline-block">dan Elektrikal untuk</span></span>
+              <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]"><span data-hero-line className="inline-block">Kebutuhan Bisnis</span></span>
+              <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]"><span data-hero-line className="inline-block">dan Proyek.</span></span>
             </h1>
 
-            <p data-hero-para className="mt-8 max-w-xl text-base md:text-lg text-[color:var(--paper)]/75 leading-relaxed">
-              {companyData.name} menyediakan kebutuhan pencahayaan, perlengkapan elektrikal, pengadaan barang, serta dukungan teknis untuk pelanggan bisnis dan berbagai kebutuhan proyek.
+            <p className="mt-8 max-w-xl text-base md:text-lg text-[color:var(--paper)]/75 leading-relaxed">
+              {companyData.name.split(" ").concat(["menyediakan","kebutuhan","pencahayaan,","perlengkapan","elektrikal,","pengadaan","barang,","serta","dukungan","teknis","untuk","pelanggan","bisnis","dan","berbagai","kebutuhan","proyek."]).map((w, i) => (
+                <span key={i} className="inline-block overflow-hidden align-top pb-[0.12em] -mb-[0.12em]">
+                  <span data-hero-word className="inline-block">{w}&nbsp;</span>
+                </span>
+              ))}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
