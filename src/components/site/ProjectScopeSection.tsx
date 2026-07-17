@@ -76,7 +76,7 @@ export function ProjectScopeSection() {
         </div>
 
         <p className="mt-10 max-w-2xl text-xs text-[color:var(--muted-grey)] leading-relaxed">
-          Visual digunakan sebagai ilustrasi ruang lingkup kebutuhan. Dokumentasi proyek perusahaan dapat ditambahkan setelah data tersedia.
+          {"\n"}
         </p>
       </div>
     </section>
