@@ -11,10 +11,10 @@ export const companyData = {
     postalCode: "60231",
     country: "Indonesia",
   },
-  // Placeholder — ganti dengan nomor resmi
-  phone: "+62 8XX-XXXX-XXXX",
-  whatsapp: "6281234567890", // format internasional tanpa tanda +
-  whatsappDisplay: "+62 8XX-XXXX-XXXX",
+  // Kontak Resmi
+  phone: "+62 821-4387-8303",
+  whatsapp: "6282143878303", // format internasional tanpa tanda +
+  whatsappDisplay: "+62 821-4387-8303",
   email: "info@chandrateknika.co.id",
   businessHours: {
     weekdays: "Senin – Jumat, 08.00 – 17.00 WIB",
