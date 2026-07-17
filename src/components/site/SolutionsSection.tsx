@@ -106,13 +106,13 @@ export function SolutionsSection() {
             </ul>
           </div>
 
-          <div className="col-span-7 xl:col-span-8 h-[78vh] relative overflow-hidden bg-[color:var(--ink-soft)]">
+          <div className="col-span-7 xl:col-span-8 h-[85vh] relative overflow-hidden bg-[color:var(--ink-soft)]">
             <div data-track className="absolute inset-0">
               {solutions.map((s) => (
                 <article
                   key={s.key}
                   data-panel
-                  className="absolute inset-0 grid grid-rows-[2fr_1fr]"
+                  className="absolute inset-0 grid grid-rows-[55%_45%]"
                 >
                   <img
                     src={s.image}
@@ -123,14 +123,14 @@ export function SolutionsSection() {
                     decoding="async"
                     className="h-full w-full object-cover"
                   />
-                  <div className="p-8 xl:p-10 bg-[color:var(--paper)] flex flex-col justify-center">
-                    <h3 className="font-display text-2xl xl:text-3xl font-semibold text-[color:var(--ink)]">
+                  <div className="p-6 xl:p-8 bg-[color:var(--paper)] flex flex-col justify-center">
+                    <h3 className="font-display text-xl xl:text-2xl font-semibold text-[color:var(--ink)]">
                       {s.title}
                     </h3>
-                    <p className="mt-3 text-[color:var(--muted-foreground)] leading-relaxed max-w-xl">
+                    <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed max-w-2xl text-sm xl:text-base">
                       {s.description}
                     </p>
-                    <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-[color:var(--charcoal)]/80">
+                    <ul className="mt-4 grid grid-cols-2 gap-x-5 gap-y-1.5 text-sm text-[color:var(--charcoal)]/80">
                       {s.items.map((it) => (
                         <li key={it} className="flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--amber-lit)]" /> {it}
