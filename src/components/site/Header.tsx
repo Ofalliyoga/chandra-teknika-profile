@@ -32,7 +32,7 @@ export function Header() {
               <span className="font-display text-[13px] tracking-[0.28em] uppercase font-bold text-[color:var(--amber-lit)]">Teknika</span>
             </span>
             <span aria-hidden className="hidden sm:block h-6 w-px bg-white/25" />
-            <span aria-hidden className="hidden sm:inline text-[10px] tracking-[0.3em] uppercase text-[color:var(--muted-grey)]">SBY · EST</span>
+            <span aria-hidden className="hidden sm:inline text-[10px] tracking-[0.3em] uppercase text-[color:var(--muted-grey)]">SBY · EST JAVA</span>
           </a>
 
           <nav aria-label="Utama" className="hidden lg:flex items-center gap-9">
